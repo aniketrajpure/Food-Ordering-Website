@@ -1,0 +1,163 @@
+<!-- <!DOCTYPE html>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="PAY.css">
+<div class="container">
+  <div id="Checkout" class="inline">
+      <h1>Pay Invoice</h1>
+      <div class="card-row">
+          <span class="visa"></span>
+          <span class="mastercard"></span>
+          <span class="amex"></span>
+          <span class="discover"></span>
+      </div>
+      <form>
+          <div class="form-group">
+              <label for="PaymentAmount">Payment amount</label>
+              <div class="amount-placeholder">
+                  <span>₹</span>
+                  <span>500</span>
+              </div>
+          </div>
+          
+          <div class="form-group">
+              <label or="NameOnCard">Name on card</label>
+              <input id="NameOnCard" class="form-control" type="text" maxlength="255"></input>
+          </div>
+          <br>
+          <div class="form-group">
+              <label for="CreditCardNumber">Card number</label>
+              <input id="CreditCardNumber" class="null card-image form-control" type="text"></input>
+          </div>
+          <br>
+          <div class="expiry-date-group form-group">
+              <label for="ExpiryDate">Expiry date</label>
+              <input id="ExpiryDate" class="form-control" type="text" placeholder="MM / YY" maxlength="7"></input>
+          </div>
+          <br><br><br>
+          <div class="security-code-group form-group">
+              <label for="SecurityCode">Security code</label>
+              <div class="input-container" >
+                  <input id="SecurityCode" class="form-control" type="text" ></input>
+                  <i id="cvc" class="fa fa-question-circle"></i>
+              </div>
+              <br>
+              <div class="cvc-preview-container two-card hide">
+                  <div class="amex-cvc-preview"></div>
+                  <div class="visa-mc-dis-cvc-preview"></div>
+              </div>
+          </div>
+          <br>
+          <div class="zip-code-group form-group">
+              <label for="ZIPCode">ZIP/Postal code</label>
+              <div class="input-container">
+                  <input id="ZIPCode" class="form-control" type="text" maxlength="10"></input>
+                  <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="left" data-content="Enter the ZIP/Postal code for your credit card billing address."><i class="fa fa-question-circle"></i></a>
+              </div>
+          </div>
+          <br>
+          <br>
+          <button id="PayButton" class="btn btn-block btn-success submit-button" type="submit">
+              <span class="submit-button-lock"></span>
+              <span class="align-middle">Pay 500₹</span>
+          </button>
+      </form>
+  </div>
+</div>
+<script src="PAY.js"></script>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <link href="paymentform.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" href="PAY.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <h2>Payment Form</h2>
+        <form method="POST">
+            <h4>Account</h4>
+            <div class="input-group">
+                <div class="input-box">
+                    <input type="text" placeholder="Full Name" required class="name">
+                    <i class="fa fa-user icon"></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" placeholder="Nick Name" required class="name">
+                    <i class="fa fa-user icon"></i>
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="input-box">
+                    <input type="email" placeholder="Email Adress" required class="name">
+                    <i class="fa fa-envelope icon"></i>
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="input-box">
+                    <h4> Date of Birth</h4>
+                    <input type="text" placeholder="DD" class="dob">
+                    <input type="text" placeholder="MM" class="dob">
+                    <input type="text" placeholder="YYYY" class="dob">
+                </div>
+                <div class="input-box">
+                    <h4> Gender</h4>
+                    <input type="radio" id="b1" name="gendar" checked class="radio">
+                    <label for="b1">Male</label>
+                    <input type="radio" id="b2" name="gendar" class="radio">
+                    <label for="b2">Female</label>
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="input-box">
+                    <h4>Payment Details</h4>
+                    <input type="radio" name="pay" id="bc1" checked class="radio">
+                    <label for="bc1"><span><i class="fa fa-cc-visa"></i> Credit Card</span></label>
+                    <input type="radio" name="pay" id="bc2" class="radio">
+                    <label for="bc2"><span><i class="fa fa-cc-paypal"></i> Paypal</span></label>
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="input-box">
+                    <input type="tel" placeholder="Card Number" required class="name">
+                    <i class="fa fa-credit-card icon"></i>
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="input-box">
+                    <input type="tel" placeholder="Card CVC" required class="name">
+                    <i class="fa fa-user icon"></i>
+                </div>
+                <div class="input-box">
+                    <select>
+                        <option>01 jun</option>
+                        <option>02 jun</option>
+                        <option>03 jun</option>
+                    </select>
+                    <select>
+                        <option>2020</option>
+                        <option>2021</option>
+                        <option>2022</option>
+                    </select>
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="input-box">
+                    <a href="Payment done.html" type="submit">PAY NOW</button>
+                   
+                </div>
+                
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
